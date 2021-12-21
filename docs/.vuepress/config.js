@@ -10,7 +10,7 @@ module.exports = {
       lang: 'zh-CN'
     }
   },
-  title: "soupJian的前端之旅",
+  title: "soupJian的个人空间",
   description: '把所有的不快给昨天 | 把所有的努力给今天 | 把所有的希望给明天',
   dest: './dist',
   head: [

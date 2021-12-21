@@ -2,6 +2,9 @@
  评论区域颜色
 */
 
+.comments-wrapper{
+  padding: 0 !important;
+}
 #valine-vuepress-comment {
   max-width: 860px;
   margin: auto;

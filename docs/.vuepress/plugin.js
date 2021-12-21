@@ -19,7 +19,7 @@ module.exports = [
         appKey: 'dM1V7csYWFjadISkE5S77Fm3'
       }
     }
-  ]
+  ],
   // 更新刷新插件
 //   ['@vuepress/pwa', {
 //     serviceWorker: true,
