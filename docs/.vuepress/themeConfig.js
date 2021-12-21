@@ -53,7 +53,7 @@ module.exports = {
   // 自动形成侧边导航
   // sidebar: 'auto',
   // 最后更新时间
-  lastUpdated: 'Last Updated',
+  lastUpdated: '最近更新',
   // 作者
   author: 'soupjian',
   // 作者头像
