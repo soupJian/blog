@@ -16,7 +16,8 @@ module.exports = [
       options: {
         el: '#valine-vuepress-comment',
         appId: 'yxTchHuQE52RuyGLLtu6TJ3E-gzGzoHsz',
-        appKey: 'dM1V7csYWFjadISkE5S77Fm3'
+        appKey: 'dM1V7csYWFjadISkE5S77Fm3',
+        avatar: 'robohash'
       }
     }
   ],
