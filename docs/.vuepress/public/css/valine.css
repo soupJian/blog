@@ -8,7 +8,6 @@
 #valine-vuepress-comment {
   max-width: 860px;
   margin: auto;
-  padding: 2rem 2.5rem;
 }
 #valine-vuepress-comment .vwrap{
   background-color: rgba(27, 31, 35, 0.05);
@@ -26,6 +25,9 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px
+}
+#valine-vuepress-comment .vbtn{
+  border-color: #dedede;
 }
 #cancel-reply .cancel-reply{
   height: 1px;
