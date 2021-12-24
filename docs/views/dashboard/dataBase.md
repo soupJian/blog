@@ -167,3 +167,4 @@ const getScale = () =>{
 本人开发大屏的案例 [业务数据大屏](http://cc-hc.com:8989/) 和 [区块链数据大屏](https://www.yljr.com/zqyl-reveal/#/)
 
 其他的由于需要权限才能观赏就不分享了.
+<Valine/>

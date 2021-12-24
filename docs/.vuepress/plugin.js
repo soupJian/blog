@@ -8,19 +8,19 @@ module.exports = [
   //   }
   // }]
   // 方法二
-  [
-    'vuepress-plugin-comment',
-    {
-      choosen: 'valine', 
-      // options选项中的所有参数，会传给Valine的配置
-      options: {
-        el: '#valine-vuepress-comment',
-        appId: 'yxTchHuQE52RuyGLLtu6TJ3E-gzGzoHsz',
-        appKey: 'dM1V7csYWFjadISkE5S77Fm3',
-        avatar: 'robohash'
-      }
-    }
-  ],
+  // [
+  //   'vuepress-plugin-comment',
+  //   {
+  //     choosen: 'valine', 
+  //     // options选项中的所有参数，会传给Valine的配置
+  //     options: {
+  //       el: '#valine-vuepress-comment',
+  //       appId: 'yxTchHuQE52RuyGLLtu6TJ3E-gzGzoHsz',
+  //       appKey: 'dM1V7csYWFjadISkE5S77Fm3',
+  //       avatar: 'robohash'
+  //     }
+  //   }
+  // ],
   // 更新刷新插件
 //   ['@vuepress/pwa', {
 //     serviceWorker: true,

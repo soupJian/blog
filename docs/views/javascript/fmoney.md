@@ -48,3 +48,4 @@ const trimResult = trimMoney(result)
 
 console.log(trimResult); // 12345678.00
 ```
+<Valine/>

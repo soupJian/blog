@@ -133,5 +133,7 @@ var a = /^\d{1,}$/
 a.test('1bc') // false
 a.test(123) // true
 ```
+<Valine/>
+
 
   
