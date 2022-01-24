@@ -10110,22 +10110,9 @@ validate-npm-package-name@^3.0.0, validate-npm-package-name@~3.0.0:
   dependencies:
     builtins "^1.0.3"
 
-valine@^1.3.9, valine@^1.4.14:
+valine@^1.3.9, valine@^1.4.14, valine@^1.4.16:
   version "1.4.16"
   resolved "https://registry.npmmirror.com/valine/download/valine-1.4.16.tgz#6b077734c94d75cb6b1cbfb88e9e634000c1bfef"
-  integrity sha1-awd3NMlNdctrHL+4jp5jQADBv+8=
-  dependencies:
-    balajs "^1.0.7"
-    balalaika "^1.0.1"
-    element-closest "^3.0.2"
-    insane "^2.6.2"
-    leancloud-storage "^3.0.4"
-    storejs "^1.0.25"
-    xss "^1.0.6"
-
-valine@^1.4.16:
-  version "1.4.16"
-  resolved "https://registry.npmmirror.com/valine/download/valine-1.4.16.tgz?cache=0&sync_timestamp=1634638736443&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fvaline%2Fdownload%2Fvaline-1.4.16.tgz#6b077734c94d75cb6b1cbfb88e9e634000c1bfef"
   integrity sha1-awd3NMlNdctrHL+4jp5jQADBv+8=
   dependencies:
     balajs "^1.0.7"

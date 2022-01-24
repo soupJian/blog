@@ -3,8 +3,10 @@ title: 数字金钱格式化转换
 date: 2021-12-24
 categories:
  - javascript
+ - utils
 tags:
  - javascript
+ - utils
 ---
 
 ## 需求
@@ -36,6 +38,16 @@ const result = fmoney(money)
 console.log(result); // 12,345,678.00
 
 ```
+
+## toLocaleString() 更简洁
+
+```js
+const num = 123456789.79
+num.toLocaleString() // 123,456,789.79
+
+```
+
+**注意只有`number`才支持此方法，注意对应转换**
 
 ## 取消格式化
 
