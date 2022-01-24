@@ -2,9 +2,9 @@
 title: js随机背景色
 date: 2021-12-24
 categories:
- - javascript
+ - utils
 tags:
- - javascript
+ - utils
 ---
 
 ## 方案一
