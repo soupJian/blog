@@ -2,9 +2,9 @@
 title: 响应式数据大屏构建
 date: 2021-12-24
 categories:
- - 数据可视化
+ - dashboard
 tags:
- - 数据可视化
+ - dashboard
 ---
 
 ## 需求

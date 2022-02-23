@@ -2,9 +2,9 @@
 title: js数据类型介绍
 date: 2021-12-23
 categories:
- - javascript
+ - base
 tags:
- - javascript
+ - base
 ---
 >总共有八种 
 
