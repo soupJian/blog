@@ -1,6 +1,6 @@
 ---
 title: axios封装
-date: 2022-01-24
+date: 2022-02-23
 categories:
  - utils
 tags:
@@ -95,52 +95,13 @@ function login(phone,password){
 }
 ```
 
-## 完整
 
-```js
-import axios from 'axios'
+## 取消axios请求
 
-// 创建一个axios实例
-const service = axios.create({
-  baseURL: "/api",
-  method: "post",
-  headers: {
-    "Content-Type": "application/json;charset=UTF-8"
-  }
-});
+> 情景： 用户点了分页，调用了接口，等待过程中又点击了查询接口
+> 此时应该展示的是查询内容
+> 但是查询接口比分页接口慢，页面已经渲染了分页数据，误导用户以为是查询数据
+> 则此时需要终止分页接口
 
-// 请求拦截
-service.interceptors.request.use(
-  config => {
-    const token = getUserToken();
-    // 登录成功请求头带上用户token
-    if (token) {
-      config.headers["token"] = token;
-    }
-    return config;
-  },
-  error => {
-    // 请求错误做些事
-    return Promise.reject(error);
-  }
-);
+持续更新...
 
-// 响应拦截
-service.interceptors.response.use(
-  response => {
-    const res = response.data;
-    if (res.code === 200) {
-      return res.data;
-    }else if (res.code === 4001) {
-      // 未登录或登录token已过期
-    } 
-    else {
-     return Promise.reject(res);
-    }
-  },
-  error => {
-    // 网络错误
-    return Promise.reject(error);
-  }
-);
-```
