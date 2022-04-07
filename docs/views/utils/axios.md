@@ -95,13 +95,97 @@ function login(phone,password){
 }
 ```
 
+## 基于typescript
 
-## 取消axios请求
+### 封装
+```ts
+import axios from 'axios';
+import { AxiosInstance, AxiosRequestConfig } from 'axios';
+// 创建一个实例类
+class service {
+  instance: AxiosInstance;
+  constructor(config: AxiosRequestConfig) {
+    this.instance = axios.create(config);
+    // 请求拦截
+    this.instance.interceptors.request.use(
+      config => {
+        config.params = {
+          ...config.params,
+          token: '******',
+        };
+        return config;
+      },
+      err => {
+        return err;
+      },
+    );
+    // 响应拦截
+    this.instance.interceptors.response.use(
+      res => {
+        return res.data;
+      },
+      err => {
+        return err;
+      },
+    );
+  }
+  // 响应拦截
+  request<T>(config: AxiosRequestConfig): Promise<T> {
+    return new Promise((resolve, reject) => {
+      this.instance
+        .request<any, T>(config)
+        .then(res => {
+          resolve(res);
+        })
+        .catch(err => {
+          reject(err);
+          return err;
+        });
+    });
+  }
+  get<T>(config: AxiosRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'GET' });
+  }
+  post<T>(config: AxiosRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'POST' });
+  }
+  delete<T>(config: AxiosRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'DELETE' });
+  }
+  patch<T>(config: AxiosRequestConfig): Promise<T> {
+    return this.request<T>({ ...config, method: 'PATCH' });
+  }
+}
 
-> 情景： 用户点了分页，调用了接口，等待过程中又点击了查询接口
-> 此时应该展示的是查询内容
-> 但是查询接口比分页接口慢，页面已经渲染了分页数据，误导用户以为是查询数据
-> 则此时需要终止分页接口
+const baseURL = '/api'; // 自己服务器需要代理
+
+const request = new service({
+  baseURL
+});
+export default request;
+
+```
+### 使用
+
+```ts
+import request from '@/utils/request';
+
+interface bannerType {
+  imageUrl: string;
+}
+
+/**
+ * 获取轮播图
+ * @returns
+ */
+export const BANNER = async (): Promise<bannerType[]> => {
+  const res = await request.get<{ banners: bannerType[] }>({
+    url: '/banner',
+  });
+  return res.banners;
+};
+
+```
 
 持续更新...
 

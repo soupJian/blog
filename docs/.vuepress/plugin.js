@@ -30,12 +30,12 @@ module.exports = [
 //     }
 //   }],
 // 代码复制弹窗插件
-  // ["vuepress-plugin-nuggets-style-copy", {
-  //   copyText: "copy",
-  //   tip: {
-  //       content: "复制成功!"
-  //   }
-  // }],
+  ["vuepress-plugin-nuggets-style-copy", {
+    copyText: "copy",
+    tip: {
+        content: "复制成功!"
+    }
+  }],
 //   ['@vuepress/last-updated', 
 //     {
 //       transformer: (timestamp, lang) => {
