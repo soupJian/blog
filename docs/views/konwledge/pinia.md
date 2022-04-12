@@ -41,6 +41,8 @@ export default defineStore('theme', {
   state: () => {
     return {
       theme: 'light',
+      list: [] as string[], // 对于数组和对象，无法进行类型推断，需要采用断言
+      userInfo: null as userType | null
     }
   },
   getters:{

@@ -13,7 +13,13 @@ tags:
 
 ## 创建入口store
 
-<img src="/img/vuex01.png" />
+> store
+> >  modules 仓库模块化
+> > >user.ts  user仓库
+> >
+> > index.ts  仓库入口\
+> > type.ts   存储store interface类型
+
 
 ### index.ts
 
