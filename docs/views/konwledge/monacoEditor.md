@@ -19,7 +19,7 @@ tags:
 yarn add monaco-editor 
 yarn add monaco-editor-webpack-plugin
 ```
-### 配置vue.config.js
+## 配置vue.config.js
 
 ```js
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
@@ -28,12 +28,7 @@ module.exports = {
   productionSourceMap: false, // 生产打包时不输出map文件，增加打包速度
   chainWebpack:(config)=>{
     config.plugins.delete('prefetch'),
-    config.plugin('monaco-editor').use(MonacoWebpackPlugin, [
-      {
-        // Languages are loaded on demand at runtime
-        languages: ['javascript']
-      }
-    ])
+    config.plugin('monaco-editor').use(MonacoWebpackPlugin)
   },
   // configureWebpack: {
   //   plugins: [
@@ -77,7 +72,7 @@ export default {
           automaticLayout: true, //自动布局
           glyphMargin: true, //字形边缘
           useTabStops: false,****
-          fontSize: 32, //字体大小
+          fontSize: 14, //字体大小
           autoIndent: true, //自动布局
           //quickSuggestionsDelay: 500,   //代码提示延时
           folding: true,
@@ -121,7 +116,7 @@ export default {
         language: self.language, // 支持语言
         theme: "vs-light", // 主题
         selectOnLineNumbers: true, //显示行号
-        editorOptions: self.editorOptions,
+        ...self.editorOptions,
       });
       self.$emit("editMounted", self.editor); //编辑器创建完成回调
       // self.editor.onDidChangeModelContent(function (event) {
@@ -175,4 +170,29 @@ export default {
    }
  }
 </script>
+```
+
+## 常用 option
+
+```
+value: '', // 编辑器初始显示文字
+language: 'javascript', // 语言javascript | json
+automaticLayout: true, // 自动布局
+theme: 'vs', // 官方自带三种主题vs, hc-black, or vs-dark
+foldingStrategy: 'indentation', // 代码可分小段折叠
+overviewRulerBorder: false, // 不要滚动条的边框
+lineNumbers: 'off', // 控制行号的出现on | off
+scrollbar: { // 滚动条设置
+  verticalScrollbarSize: 4, // 竖滚动条
+  horizontalScrollbarSize: 6, // 横滚动条
+},
+readOnly: false, // 是否只读 Defaults to false | true
+minimap: { // 关闭小地图
+  enabled: false,
+},
+cursorStyle: 'line', // 光标样式
+automaticLayout: false, // 自动布局
+fontSize: 14, // 字体大小
+tabSize: 2, // tab缩进长度
+autoIndent: true, // 自动布局
 ```
