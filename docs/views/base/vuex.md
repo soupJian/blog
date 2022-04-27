@@ -2,9 +2,9 @@
 title: vuex在ts中使用
 date: 2022-04-11
 categories:
- - knowledge
+ - base
 tags:
- - knowledge
+ - base
 ---
 
 :::tip

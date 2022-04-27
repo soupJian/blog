@@ -2,9 +2,9 @@
 title: pinia
 date: 2022-04-11
 categories:
- - knowledge
+ - base
 tags:
- - knowledge
+ - base
 ---
 
 :::tip

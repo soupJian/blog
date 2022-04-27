@@ -2,9 +2,9 @@
 title: 你不知道的toLocaleString实用方法
 date: 2022-01-24
 categories:
- - utils
+ - base
 tags:
- - utils
+ - base
 ---
 
 ## 格式化金钱

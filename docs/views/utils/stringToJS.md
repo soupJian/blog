@@ -2,9 +2,9 @@
 title: string to js
 date: 2022-04-15
 categories:
- - knowledge
+ - utils
 tags:
- - knowledge
+ - utils
 ---
 
 :::tip
