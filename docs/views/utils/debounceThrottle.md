@@ -18,7 +18,7 @@ tags:
 
 防抖实现原理就是利用定时器，函数第一次执行时设定一个定时器，并且通过闭包缓存起来，下一次调用如果存在定时器就清空之前的定时器，并重新设定一个新的定时器，当定时器计时结束后触发函数执行
 
-### 代码
+### 防抖代码
 
 ```js
 function debounce(fn,delay) {
@@ -42,7 +42,7 @@ function debounce(fn,delay) {
  例如： 按钮点击
 :::
 
-### 代码
+### 节流代码
 
 ```js
 function throttle(fn, delay) {
