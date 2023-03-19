@@ -59,9 +59,9 @@ module.exports = {
   // 作者头像
   authorAvatar: '/img/avator.png',
   // 备案号
-  record: 'xxxx',
+  record: null,
   // 项目开始时间
-  startYear: '2021'
+  // startYear: '2021',
   /**
    * 密钥 (if your blog is private)
    */

@@ -10,8 +10,8 @@ module.exports = {
       lang: 'zh-CN'
     }
   },
-  title: "soupJian的个人空间",
-  description: '把所有的不快给昨天 | 把所有的努力给今天 | 把所有的希望给明天',
+  title: "soupJian私房菜",
+  description: '读万卷书 | 赚万贯财 | 行万里路',
   dest: './dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
