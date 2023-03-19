@@ -2,9 +2,9 @@
 title: 你不知道的contentededitable
 date: 2022-02-25
 categories:
- - base
+ - javascript
 tags:
- - base
+ - 奇淫技巧
 ---
 
 > 仿造textarea和input编辑

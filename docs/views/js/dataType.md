@@ -2,7 +2,7 @@
 title: js数据类型介绍
 date: 2021-12-23
 categories:
- - base
+ - javascript
 tags:
  - base
 ---

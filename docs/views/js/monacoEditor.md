@@ -2,9 +2,9 @@
 title: monaco editor使用与优化
 date: 2022-04-15
 categories:
- - base
+ - javascript
 tags:
- - base
+ - 插件
 ---
 
 > vscode在线编辑器

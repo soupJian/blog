@@ -2,7 +2,7 @@
 title: 上传文件的大小和格式校验
 date: 2021-12-24
 categories:
- - utils
+ - javascript
 tags:
  - utils
 ---

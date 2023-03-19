@@ -1,10 +1,11 @@
 ---
-title: 你不知道的toLocaleString实用方法
+title: toLocaleString
 date: 2022-01-24
 categories:
- - base
+ - javascript
 tags:
- - base
+ - 奇淫技巧
+ - utils
 ---
 
 ## 格式化金钱

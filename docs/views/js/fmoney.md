@@ -1,8 +1,8 @@
 ---
-title: 数字金钱格式化转换
+title: 数字金钱格式化
 date: 2021-12-24
 categories:
- - utils
+ - javascript
 tags:
  - utils
 ---

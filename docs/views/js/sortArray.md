@@ -2,9 +2,9 @@
 title: 数组乱序---洗牌算法
 date: 2021-12-24
 categories:
- - utils
+ - javascript
 tags:
- - utils
+ - 算法
 ---
 
 >场景\

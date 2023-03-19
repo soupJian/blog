@@ -3,8 +3,6 @@ title: 浅记录一下第一份工作离职和第二份工作入职
 date: 2022-09-26
 categories:
   - life
-tags:
-  - life
 ---
 
 似乎很久没有更新博客了...

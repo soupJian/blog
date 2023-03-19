@@ -1,8 +1,8 @@
 ---
-title: 前端实现数据导出excel
+title: 数据导出excel我呢见
 date: 2022-10-19
 categories:
-  - utils
+  - javascript
 tags:
   - utils
 ---

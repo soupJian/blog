@@ -2,9 +2,9 @@
 title: 递归算法(快速排序)
 date: 2022-03-16
 categories:
- - base
+ - javascript
 tags:
- - base
+ - 算法
 ---
 
 >递归算法通俗地讲类似于while，当条件满足时候一直进入循环，不满足跳出循环

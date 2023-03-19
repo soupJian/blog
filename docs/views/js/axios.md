@@ -2,7 +2,7 @@
 title: axios封装
 date: 2022-02-23
 categories:
- - utils
+ - javascript
 tags:
  - utils
 ---

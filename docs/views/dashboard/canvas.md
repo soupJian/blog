@@ -2,9 +2,9 @@
 title: canvas基础
 date: 2022-02-11
 categories:
- - dashboard
+ - javascript
 tags:
- - dashboard
+ - 数据可视化
 ---
 
 

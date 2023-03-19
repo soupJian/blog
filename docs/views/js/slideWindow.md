@@ -2,9 +2,9 @@
 title: 移动窗口(无重复最长子串)
 date: 2022-03-16
 categories:
- - base
+ - javascript
 tags:
- - base
+ - 算法
 ---
 
 >移动窗口\

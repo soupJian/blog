@@ -3,8 +3,6 @@ title: 博客私有平台搭建成功
 date: 2021-12-21
 categories:
  - life
-tags:
- - life
 ---
 
 :::tip 介绍

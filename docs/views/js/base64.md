@@ -1,8 +1,8 @@
 ---
-title: 本地上传的文件转为 base64
+title: 文件转 base64
 date: 2022-10-19
 categories:
-  - utils
+  - javascript
 tags:
   - utils
 ---

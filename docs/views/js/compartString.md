@@ -1,8 +1,8 @@
 ---
-title: 字符串比较顺序
+title: 首字母排序
 date: 2022-04-19
 categories:
- - utils
+ - javascript
 tags:
  - utils
 ---

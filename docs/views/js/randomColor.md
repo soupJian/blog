@@ -1,8 +1,8 @@
 ---
-title: js随机背景色
+title: 随机背景色
 date: 2021-12-24
 categories:
- - utils
+ - javascript
 tags:
  - utils
 ---

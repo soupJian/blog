@@ -1,8 +1,8 @@
 ---
-title: 生成window临时地址
+title: a链接下载
 date: 2022-10-19
 categories:
-  - utils
+  - javascript
 tags:
   - utils
 ---

@@ -2,7 +2,7 @@
 title: 手写promise
 date: 2021-12-24
 categories:
- - base
+ - javascript
 tags:
  - base
 ---
