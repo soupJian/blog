@@ -2,10 +2,10 @@
 title: pinia
 date: 2022-04-11
 categories:
- - javascript
+ - npm
  - vue
 tags:
- - 插件
+ - npm
 ---
 
 :::tip
