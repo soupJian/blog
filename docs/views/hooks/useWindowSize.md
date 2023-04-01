@@ -2,11 +2,9 @@
 title: useWindowSize
 date: 2023-03-19
 categories:
- - javascript
  - react
 tags:
  - hooks
- - utils
 ---
 ```js
 import { useState, useEffect } from 'react';

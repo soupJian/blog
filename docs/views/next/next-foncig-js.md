@@ -3,7 +3,6 @@ title: next.config.js
 date: 2023-03-19
 categories:
  - next
- - react
 tags:
  - next
 ---

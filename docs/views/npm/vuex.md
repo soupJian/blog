@@ -5,7 +5,7 @@ categories:
  - javascript
  - vue
 tags:
- - ts
+ - npm
 ---
 
 :::tip
