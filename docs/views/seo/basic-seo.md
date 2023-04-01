@@ -16,3 +16,5 @@ tags:
 ## [搞定收录，搞定排名](/views/seo/seo-record)
 
 ## [谷歌指南，入门](/views/seo/seo-open-door)
+
+## [seo误区，少走弯路](/views/seo/seo-warn)
