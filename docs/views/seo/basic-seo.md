@@ -3,6 +3,8 @@ title: Basic seo
 date: 2023-04-01 15:00:00
 categories:
  - seo
+tags:
+  Basic Seo
 ---
 
 ## [why seo?](/views/seo/why-seo)
