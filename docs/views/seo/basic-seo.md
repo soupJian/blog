@@ -9,4 +9,6 @@ categories:
 
 ## [seo黑帽与白帽](/views/seo/black-white-hat)
 
-## [知己知彼](/views/seo/konw-seo)
+## [知己知彼](/views/seo/seo-know)
+
+## [搞定收录，搞定排名](/views/seo/seo-record)
