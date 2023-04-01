@@ -4,7 +4,7 @@ date: 2023-04-01 15:00:00
 categories:
  - seo
 tags:
-  Basic Seo
+ - seo
 ---
 
 ## [why seo?](/views/seo/why-seo)
@@ -18,3 +18,6 @@ tags:
 ## [谷歌指南，入门](/views/seo/seo-open-door)
 
 ## [seo误区，少走弯路](/views/seo/seo-warn)
+
+## [加快走出沙盒，提升排名](/views/seo/seo-up-rank)
+
