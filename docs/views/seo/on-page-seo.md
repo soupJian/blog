@@ -12,3 +12,5 @@ tags:
 ## [获得大量流量的高级打法](/views/seo/seo-flow)
 
 ## [提升点击率 title、meta](/views/seo/seo-click-rate)
+
+## [不可忽视图片搜索流量](/views/seo/seo-image)
