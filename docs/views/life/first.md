@@ -3,6 +3,8 @@ title: 浅记录一下第一份工作离职和第二份工作入职
 date: 2022-09-26
 categories:
   - life
+keys: 
+  - DBC66279A075DB38D56AD3BDB93C86CC
 ---
 
 似乎很久没有更新博客了...
