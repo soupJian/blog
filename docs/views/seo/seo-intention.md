@@ -1,5 +1,5 @@
 ---
-title: 让你排名首页的seo概念
+title: 了解搜索者意图
 date: 2023-04-02 19:00:00
 categories:
  - seo

@@ -7,9 +7,9 @@ tags:
  - seo
 ---
 
-## [让你排名首页的seo概念](/views/seo/seo-page-rank.html)
+## [了解搜索者意图](/views/seo/seo-intention.html)
 
-## [获得大量流量的高级打法](/views/seo/seo-flow.html)
+## [糅合关键词](/views/seo/seo-blend-keywords.html)
 
 ## [提升点击率 title、meta](/views/seo/seo-click-rate.html)
 
