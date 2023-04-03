@@ -14,3 +14,5 @@ tags:
 ## [提升点击率 title、meta](/views/seo/seo-click-rate.html)
 
 ## [不可忽视图片搜索流量](/views/seo/seo-image.html)
+
+## [Site Structure（站点结构）](/views/seo/seo-site-structure.html)
