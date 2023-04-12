@@ -2,10 +2,9 @@
 title: pinia
 date: 2022-04-11
 categories:
- - npm
- - vue
+  - npm
 tags:
- - npm
+  - npm
 ---
 
 :::tip

@@ -2,10 +2,9 @@
 title: vuex在ts中使用
 date: 2022-04-11
 categories:
- - javascript
- - vue
-tags:
- - npm
+  - npm
+tags: 
+  - npm
 ---
 
 :::tip

@@ -2,9 +2,8 @@
 title: 防抖和节流
 date: 2022-04-27
 categories:
- - javascript
-tags:
- - utils
+  - js
+
 ---
 
 ## 防抖

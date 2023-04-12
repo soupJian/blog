@@ -1,11 +1,10 @@
 ---
-title: 手写promise
+title: promise
 date: 2021-12-24
 categories:
- - javascript
-tags:
- - base
+ - js
 ---
+
 >在面试中，手写promise也是热门考点\
 >手写promise，能帮助我们更好的理解并运用promise
 

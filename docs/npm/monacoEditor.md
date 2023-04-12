@@ -2,9 +2,9 @@
 title: monaco editor使用与优化
 date: 2022-04-15
 categories:
- - npm
+  - npm
 tags:
- - npm
+  - npm
 ---
 
 > vscode在线编辑器

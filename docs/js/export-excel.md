@@ -1,10 +1,8 @@
 ---
-title: 数据导出excel我呢见
+title: 前端导出excel文件
 date: 2022-10-19
 categories:
-  - javascript
-tags:
-  - utils
+  - js
 ---
 
 ## 分析

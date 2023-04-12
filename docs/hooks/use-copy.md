@@ -2,9 +2,9 @@
 title: useClipboard 文字复制
 date: 2023-03-19
 categories:
- - react
+  - hooks
 tags:
- - hooks
+  - hooks
 ---
 ## 普通写法
 

@@ -2,10 +2,9 @@
 title: js数字运算
 date: 2023-03-19
 categories:
- - javascript
-tags:
- - utils
+  - js
 ---
+
 ```js
 /**
  * @param {*} num1 

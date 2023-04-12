@@ -2,9 +2,8 @@
 title: 首字母排序
 date: 2022-04-19
 categories:
- - javascript
-tags:
- - utils
+  - js
+
 ---
 
 ## 普通比较

@@ -2,9 +2,7 @@
 title: a链接下载
 date: 2022-10-19
 categories:
-  - javascript
-tags:
-  - utils
+  - js
 ---
 
 **上传后的文件对象**

@@ -1,8 +1,8 @@
 ---
-title: 响应式数据大屏构建
+title: 响应式数据大屏
 date: 2021-12-24
 categories:
- - javascript
+ - 数据可视化
 tags:
  - 数据可视化
 ---

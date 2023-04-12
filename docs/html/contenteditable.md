@@ -2,9 +2,7 @@
 title: 你不知道的contentededitable
 date: 2022-02-25
 categories:
- - javascript
-tags:
- - 奇淫技巧
+ - html
 ---
 
 > 仿造textarea和input编辑
@@ -17,6 +15,6 @@ h5新增属性，可编辑文本
 
 ## 小试牛刀
 
-<collect-contenteditable />
+<html-contenteditable />
 
 修改样式是由 `:focus-visible` 事件触发的

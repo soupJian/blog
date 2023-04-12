@@ -2,9 +2,7 @@
 title: 时间格式化处理以及时间对比
 date: 2022-01-24
 categories:
- - javascript
-tags:
- - utils
+  - js
 ---
 
 ## 时间转时间戳

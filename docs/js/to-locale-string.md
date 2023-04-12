@@ -1,11 +1,8 @@
 ---
-title: toLocaleString
+title: toLocaleString格式化
 date: 2022-01-24
 categories:
- - javascript
-tags:
- - 奇淫技巧
- - utils
+ - js
 ---
 
 ## 格式化金钱

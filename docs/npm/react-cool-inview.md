@@ -3,10 +3,9 @@ title: react-cool-inview 滚动加载
 date: 2023-03-19
 description: react滚动加载组件
 categories:
- - npm
- - react
+  - npm
 tags:
- - npm
+  - npm
 ---
 ```js
 import { useInView } from "react-cool-inview";

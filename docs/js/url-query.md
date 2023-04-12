@@ -1,10 +1,8 @@
 ---
-title: url-query-params
+title: 路由参数查询
 date: 2023-03-19
 categories:
- - javascript
-tags:
- - utils
+ - js
 ---
 ## query
 ```javascript

@@ -1,10 +1,8 @@
 ---
-title: 随机背景色
+title: 随机颜色
 date: 2021-12-24
 categories:
- - javascript
-tags:
- - utils
+ - js
 ---
 
 ## 方案一

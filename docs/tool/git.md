@@ -2,9 +2,9 @@
 title: 常用 git 指令
 date: 2023-04-03 16:38:00
 categories:
- - tool
+  - tool
 tags:
- - tool
+  - tool
 ---
 
 ## 基础操作
