@@ -50,6 +50,7 @@ module.exports = {
   // 搜索设置
   search: true,
   searchMaxSuggestions: 10,
+  noFoundPageByTencent: false, // 404腾讯公益页面
   // 自动形成侧边导航
   sidebar: 'auto',
   // 最后更新时间
@@ -58,10 +59,16 @@ module.exports = {
   author: 'soupjian',
   // 作者头像
   authorAvatar: '/img/avator.png',
+  copyright: 'soupjian',
   // 备案号
   record: null,
+  // 备案域名
+  // ecordLink
   // 项目开始时间
   startYear: '2021',
+  // cyberSecurityRecord: 公安备案文案
+  // 公安备案地址
+  // cyberSecurityLink: ''
   /**
    * 密钥 (if your blog is private)
    */
