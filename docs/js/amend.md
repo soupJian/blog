@@ -1,8 +1,10 @@
 ---
-title: js数字运算
+title: 四则运算
 date: 2023-03-19
 categories:
-  - js
+ - js
+tags:
+ - 算法
 ---
 
 ```js

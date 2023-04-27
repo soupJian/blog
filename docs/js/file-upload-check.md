@@ -3,6 +3,8 @@ title: 上传文件的大小和格式校验
 date: 2021-12-24
 categories:
  - js
+tags:
+ - utils
 ---
 
 >根据input的change事件,可以得到上传到文件

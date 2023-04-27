@@ -3,6 +3,8 @@ title: 路由参数查询
 date: 2023-03-19
 categories:
  - js
+tags:
+ - utils
 ---
 ## query
 ```javascript

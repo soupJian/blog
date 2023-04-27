@@ -3,6 +3,8 @@ title: promise
 date: 2021-12-24
 categories:
  - js
+tags:
+ - 算法
 ---
 
 >在面试中，手写promise也是热门考点\

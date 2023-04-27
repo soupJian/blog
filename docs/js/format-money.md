@@ -3,6 +3,9 @@ title: 数字金钱格式化
 date: 2021-12-24
 categories:
  - js
+tags:
+ - 算法
+ - utils
 ---
 
 ## 需求

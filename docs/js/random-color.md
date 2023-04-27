@@ -3,6 +3,9 @@ title: 随机颜色
 date: 2021-12-24
 categories:
  - js
+tags:
+ - utils
+ - 算法
 ---
 
 ## 方案一

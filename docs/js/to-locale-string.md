@@ -3,6 +3,8 @@ title: toLocaleString格式化
 date: 2022-01-24
 categories:
  - js
+tags:
+ - utils
 ---
 
 ## 格式化金钱
