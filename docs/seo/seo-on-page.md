@@ -23,4 +23,6 @@ tags:
 
 ## [用户反馈高于数据](/seo/feedback-important.html)
 
-## [搞定Schema](/seo/schema)
+## [搞定Schema](/seo/schema.html)
+
+## [Page & Site 检查清单](/seo/check-page-site.html)
