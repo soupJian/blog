@@ -1,5 +1,5 @@
 ---
-title: Basic seo
+title: Basic Seo
 date: 2023-04-01 15:00:00
 tags:
  - seo

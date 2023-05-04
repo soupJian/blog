@@ -1,5 +1,5 @@
 ---
-title: On page seo
+title: On Page Seo
 date: 2023-04-02 18:57:00
 tags:
  - seo
