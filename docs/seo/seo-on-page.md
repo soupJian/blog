@@ -26,3 +26,5 @@ tags:
 ## [搞定Schema](/seo/schema.html)
 
 ## [Page & Site 检查清单](/seo/check-page-site.html)
+
+## [SEO优化清单](/seo/perf.html)
