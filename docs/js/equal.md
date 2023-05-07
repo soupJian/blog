@@ -1,6 +1,6 @@
 ---
 title: a==1 && a==2 && a==3
-date: 2023-05-07
+date: 2023-05-07 22:43:00
 categories:
  - js
 tags:
