@@ -3,6 +3,8 @@ title: 响应式数据大屏
 date: 2021-12-24
 categories:
  - 数据可视化
+tags:
+ - 面试
 ---
 
 ## 需求
