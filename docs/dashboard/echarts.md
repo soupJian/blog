@@ -1,6 +1,6 @@
 ---
-title: canvas基础
-date: 2023-05-19
+title: echarts 在线案例文档
+date: 2023-05-19 16:40:00
 categories:
   - 数据可视化
 ---
