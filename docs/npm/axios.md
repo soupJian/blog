@@ -187,5 +187,6 @@ export const BANNER = async (): Promise<bannerType[]> => {
 
 ```
 
+## [取消查询](/js/cancel-request.html)
 持续更新...
 
