@@ -3,8 +3,6 @@ title: canvas基础
 date: 2022-02-11
 categories:
   - 数据可视化
-tags:
-  - 数据可视化
 ---
 
 >canvas

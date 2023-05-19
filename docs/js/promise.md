@@ -3,9 +3,7 @@ title: 手写 Promise
 date: 2021-12-24
 categories:
  - js
- - 面试
 tags:
- - js
  - 面试
 sticky:
  - 1

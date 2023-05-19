@@ -3,8 +3,6 @@ title: pinia
 date: 2022-04-11
 categories:
   - npm
-tags:
-  - npm
 ---
 
 :::tip

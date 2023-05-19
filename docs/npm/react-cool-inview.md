@@ -4,8 +4,6 @@ date: 2023-03-19
 description: react滚动加载组件
 categories:
   - npm
-tags:
-  - npm
 ---
 ```js
 import { useInView } from "react-cool-inview";

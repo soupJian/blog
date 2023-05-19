@@ -3,8 +3,6 @@ title: next.config.js
 date: 2023-03-19
 categories:
   - next
-tags:
-  - next
 ---
 ```js
 const isProd = process.env.NODE_ENV === 'production'

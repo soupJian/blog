@@ -3,8 +3,6 @@ title: nvm版本控制
 date: 2023-05-14 21:37:44
 categories:
  - npm
-tags:
- - npm
 ---
 
 nvm 进行 node 的多版本控制，有时候会同时开发多个项目，node日新月异，这就导致多个项目的node环境不一样，某些node_module就安装失败

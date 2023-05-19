@@ -3,8 +3,6 @@ title: useWindowSize
 date: 2023-03-19
 categories:
   - hooks
-tags:
-  - hooks
 ---
 
 ```js

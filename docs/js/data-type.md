@@ -4,7 +4,7 @@ date: 2021-12-23
 categories:
  - js
 tags:
- - 算法
+ - 面试
 ---
 >总共有八种 
 

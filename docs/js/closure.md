@@ -3,6 +3,8 @@ title: 闭包
 date: 2023-05-04 22:04:00
 categories:
   - js
+tags:
+  - 面试
 ---
 
 ## 什么是闭包？

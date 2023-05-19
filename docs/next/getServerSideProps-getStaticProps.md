@@ -3,8 +3,6 @@ title: getServerSideProps 和 getStaticProps
 date: 2023-05-05 17:55:00
 categories:
   - next
-tags:
-  - next
 ---
 
 ## 相同点

@@ -3,8 +3,6 @@ title: setState同步异步？
 date: 2023-05-10 20:50:00
 categories:
  - react
-tags:
- - react
 ---
 
 setState用于变更状态，触发组件重新渲染，更新视图UI

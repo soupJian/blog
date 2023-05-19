@@ -3,8 +3,6 @@ title: axios封装
 date: 2022-02-23
 categories:
  - npm
-tags:
- - utils
 ---
 
 ## 安装axios
