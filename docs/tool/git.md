@@ -77,3 +77,12 @@ revert： 回滚到上一个版本
 build：改变构建流程，新增依赖库、工具等（例如 webpack、maven 修改）
 ci：自动化流程配置修改
 ```
+
+## merge
+
+```txt
+// 普通合并
+git commit -m "Merge branch 'other_branch' into dev"
+// 只合并一次提交记录
+git merge --squash other_branch
+```
