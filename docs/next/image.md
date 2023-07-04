@@ -5,7 +5,7 @@ categories:
   - next
 ---
 
-# Image 参数解析
+## Image 参数解析
 
 Image 组件来自于 next 自带的优化图像组件
 
