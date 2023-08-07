@@ -3,8 +3,8 @@ title: typescript 基础
 date: 2023-08-07 09:00:00
 categories:
   - ts
-sticky:
-  - 3
+tags:
+  - ts
 ---
 
 ## TS 介绍
