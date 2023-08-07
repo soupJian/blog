@@ -10,9 +10,9 @@ categories:
 Image 组件来自于 next 自带的优化图像组件
 
 ```jsx
-import Image from 'next/image
+import Image from "next/image";
 
-<Image src="xxx.webp"/>
+<Image src="xxx.webp" />;
 ```
 
 1. `src`（必需）：指定图像的源路径。
