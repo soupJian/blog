@@ -19,7 +19,9 @@ git commit -m "提交信息" // 推送到本地仓库
 git pull // 拉取
 git push // 推送
 ```
+
 ## 分支操作
+
 ```txt
 git branch // 查看本地分支
 git branch -a // 查看远程所有分支
@@ -29,7 +31,9 @@ git checkout -b 分支名 // 创建一个分支并切换到对应分支
 git branch -D // 删除分支
 git merge 分支名 // 当前分支和 合并分支进行代码合并
 ```
+
 ## 代码回退
+
 ```txt
 git reflog 查看记录
 
@@ -37,12 +41,15 @@ git reset [ --soft | --mixed | --hard ] 记录id
 
 --soft 撤销 commit 不撤销 add
 --mixed 撤销 commit 和 add 保留修改代码
---hard 删除工作空间改动代码，撤销commit，撤销git add . 
+--hard 删除工作空间改动代码，撤销commit，撤销git add .
 
 ```
+
 ## git revert <commit_id>
-用一次新的commit 来回滚之前的commit,此次提交前的commit -m 依然存在
-## 修改commit 注释
+
+用一次新的 commit 来回滚之前的 commit,此次提交前的 commit -m 依然存在
+
+## 修改 commit 注释
 
 ```txt
 git commit --amend
@@ -53,8 +60,9 @@ git commit --amend
 ```txt
 git log 查看提交记录
 
-git reflog 查看本地所有提交记录 
+git reflog 查看本地所有提交记录
 ```
+
 ## 回退到之前的提交记录后，不小心 git push -f 后，中间区域代码没有了，怎么办？
 
 ```txt
@@ -62,7 +70,9 @@ git reflog 查看本地所有提交记录
 采用 git reflog 可以查看本地所有的改动记录，撤销本地上一次提交就可以。
 版本回退采用 git revert
 ```
+
 ## git 提交规范
+
 ```txt
 feat：新增功能（feature）
 fix：修复补丁（bug）
@@ -85,4 +95,19 @@ ci：自动化流程配置修改
 git commit -m "Merge branch 'other_branch' into dev"
 // 只合并一次提交记录
 git merge --squash other_branch
+```
+
+## stash
+
+```txt
+// 将代码加入暂存区
+git stash
+// 查看暂存区
+git stash list
+// 应用并删除最后一条记录
+git stash pop
+// 应用某条记录
+git stash apply @stahs{0}
+// 删除记录
+git stash clear
 ```
