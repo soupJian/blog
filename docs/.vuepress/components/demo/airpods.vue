@@ -1,59 +1,38 @@
 <template>
-  <div class="hero">
-    <canvas id="hero-light" />
+  <div class="hero-wrap" ref="scrollview">
+    <canvas id="hero-lightpass" />
+    <div class="hero"></div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      html: null,
+      scrollview: null,
+      wrap: null,
       img: null,
+      canvas: null,
       context: null,
-      frameCount: 148,
+      frameCount: 147,
     };
   },
   mounted() {
-    this.templeteStyle();
     this.initCanvas();
     this.preloadImages();
-    this.html = document.documentElement;
-
     this.img = new Image();
     this.img.src = this.currentFrame(1);
-
     this.img.onload = () => {
-      this.context.drawImage(this.img, 0, 0);
+      this.drawImage();
     };
-
-    window.addEventListener("scroll", this.scroll);
+    this.$refs.scrollview.addEventListener("scroll", this.scroll, true);
   },
   methods: {
-    templeteStyle() {
-      const body = document.body;
-      body.classList.add("templeteBody");
-
-      const sections = document.getElementsByTagName("section");
-      sections[0].classList.add("removeTransform");
-    },
-    destroyStyle() {
-      const body = document.body;
-      body.classList.remove("templeteBody");
-
-      const sections = document.getElementsByTagName("section");
-      sections[0].classList.remove("removeTransform");
-    },
     initCanvas() {
-      const canvas = document.getElementById("hero-light");
-      canvas.width = 1158;
-      canvas.height = 770;
-      this.context = canvas.getContext("2d");
+      this.canvas = document.getElementById("hero-lightpass");
+      this.context = this.canvas.getContext("2d");
     },
     currentFrame(index) {
-      // console.log(index, index.toString(), index.toString().padStart(4, "0"));
       // 1 '1' '0001'
-      // 13 '13' '0013'
-      // 148 '148' '0148'
       return `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index
         .toString()
         .padStart(4, "0")}.jpg`;
@@ -66,11 +45,19 @@ export default {
     },
     updateImage(index) {
       this.img.src = this.currentFrame(index);
-      this.context.drawImage(this.img, 0, 0);
+      this.drawImage();
+    },
+    drawImage() {
+      const { canvas, img, context } = this;
+      // 在画布上绘制图片
+      context.drawImage(img, 0, 0, canvas.width, canvas.height);
     },
     scroll() {
-      const scrollTop = this.html.scrollTop;
-      const maxScrollTop = this.html.scrollHeight - window.innerHeight; // 总共可以滚动的距离
+      // console.log(e);
+      const scrollTop = this.$refs.scrollview.scrollTop;
+      // 总共可以滚动的距离 = 内容的总高度 - 父元素的高度
+      const maxScrollTop =
+        this.$refs.scrollview.scrollHeight - this.$refs.scrollview.offsetHeight;
       const scrollFraction = scrollTop / maxScrollTop; // 当前滚动距离 / 总滚动距离
       // 当前图片帧 index = 滚动比例 * 总图片帧数
       const frameIndex = Math.min(
@@ -80,20 +67,29 @@ export default {
       requestAnimationFrame(() => this.updateImage(frameIndex + 1));
     },
   },
-  destroyed() {
-    this.destroyStyle();
-    window.removeEventListener("scroll", this.scroll);
+  beforeDestroy() {
+    const scrollview = this.$refs["scrollview"];
+    scrollview.removeEventListener("scroll", this.scroll);
   },
 };
 </script>
 <style scoped>
+.hero-wrap {
+  width: 100%;
+  height: 770px;
+  background: #000;
+  border: 1px solid;
+  overflow-x: hidden;
+}
+.hero {
+  width: 100%;
+  height: 8000px;
+}
 canvas {
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  max-width: 100%;
-  max-height: 100%;
+  position: sticky;
+  top: 50%;
+  width: 100%;
+  height: 76%;
+  transform: translateY(-50%);
 }
 </style>
