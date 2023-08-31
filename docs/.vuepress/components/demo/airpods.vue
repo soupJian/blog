@@ -1,9 +1,11 @@
 <template>
   <div>
+    <p>对比静态图</p>
     <img
       src="https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0001.jpg"
       alt=""
     />
+    <p>滚动一下下面airpods</p>
     <div class="hero-wrap" ref="scrollview">
       <div class="hero"><canvas id="hero-lightpass" /></div>
     </div>
