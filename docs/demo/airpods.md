@@ -77,14 +77,14 @@ preloadImages();
 ```vue
 <template>
   <div class="hero-wrap" ref="scrollview">
-    <canvas id="hero-lightpass" />
-    <div class="hero"></div>
+    <div class="hero"><canvas id="hero-lightpass" /></div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      wrap: null,
       img: null,
       canvas: null,
       context: null,
@@ -103,8 +103,13 @@ export default {
   },
   methods: {
     initCanvas() {
-      this.canvas = document.getElementById("hero-lightpass");
-      this.context = this.canvas.getContext("2d");
+      const width = this.$refs.scrollview.offsetWidth;
+      const canvas = document.getElementById("hero-lightpass");
+      canvas.style.height = width * 0.66 + "px";
+      const context = canvas.getContext("2d");
+      this.canvas = canvas;
+      this.context = context;
+      this.$refs.scrollview.style.height = width * 0.66 + "px";
     },
     currentFrame(index) {
       // 1 '1' '0001'
@@ -125,7 +130,17 @@ export default {
     drawImage() {
       const { canvas, img, context } = this;
       // 在画布上绘制图片
-      context.drawImage(img, 0, 0, canvas.width, canvas.height);
+      context.drawImage(
+        this.img,
+        0,
+        0,
+        img.width,
+        img.height,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
     },
     scroll() {
       // console.log(e);
@@ -151,8 +166,7 @@ export default {
 <style scoped>
 .hero-wrap {
   width: 100%;
-  height: 770px;
-  background: #000;
+  /* background: #000; */
   border: 1px solid;
   overflow-x: hidden;
 }
@@ -162,10 +176,8 @@ export default {
 }
 canvas {
   position: sticky;
-  top: 50%;
+  top: 0;
   width: 100%;
-  height: 76%;
-  transform: translateY(-50%);
 }
 </style>
 ```
