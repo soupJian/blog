@@ -96,7 +96,6 @@ export default {
 .hero-wrap {
   width: 100%;
   /* background: #000; */
-  border: 1px solid;
   overflow-x: hidden;
 }
 .hero {
