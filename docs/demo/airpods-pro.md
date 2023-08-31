@@ -94,4 +94,3 @@ window.requestAnimationFrame(scrollPlay);
 ## 在线案例
 
 <demo-airpods-pro/>
-```

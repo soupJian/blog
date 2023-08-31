@@ -13,7 +13,10 @@
 <script>
 export default {
   methods: {
-    init() {},
+    init() {
+      const width = this.$refs.scrollview.offsetWidth;
+      this.$refs.scrollview.style.height = width * 0.75 + "px";
+    },
     scrollPlay() {
       const scrollTop = this.$refs.scrollview.scrollTop;
       // 总共可以滚动的距离 = 内容的总高度 - 父元素的高度
@@ -27,6 +30,7 @@ export default {
     },
   },
   mounted() {
+    this.init();
     this.$refs.scrollview.addEventListener("scroll", this.scrollPlay, true);
   },
   beforeDestroy() {
@@ -38,9 +42,7 @@ export default {
 <style scoped>
 .hero-wrap {
   width: 100%;
-  height: 700px;
-  background: #000;
-  border: 1px solid;
+  /* background: #000; */
   overflow-x: hidden;
 }
 .hero {
@@ -51,6 +53,5 @@ video {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 700px;
 }
 </style>
