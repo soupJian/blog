@@ -31,7 +31,6 @@ tags:
 <script>
 export default {
   methods: {
-    init() {},
     scrollPlay() {
       const scrollTop = this.$refs.scrollview.scrollTop;
       // 总共可以滚动的距离 = 内容的总高度 - 父元素的高度
@@ -56,10 +55,9 @@ export default {
 <style scoped>
 .hero-wrap {
   width: 100%;
-  height: 700px;
-  background: #000;
-  border: 1px solid;
+  /* background: #000; */
   overflow-x: hidden;
+  aspect-ratio: calc(1120 / 840);
 }
 .hero {
   width: 100%;
@@ -69,7 +67,6 @@ video {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 700px;
 }
 </style>
 ```

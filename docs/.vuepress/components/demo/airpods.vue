@@ -34,13 +34,10 @@ export default {
   },
   methods: {
     initCanvas() {
-      const width = this.$refs.scrollview.offsetWidth;
       const canvas = document.getElementById("hero-lightpass");
-      canvas.style.height = width * 0.66 + "px";
       const context = canvas.getContext("2d");
       this.canvas = canvas;
       this.context = context;
-      this.$refs.scrollview.style.height = width * 0.66 + "px";
     },
     currentFrame(index) {
       // 1 '1' '0001'
@@ -99,6 +96,7 @@ export default {
   width: 100%;
   /* background: #000; */
   overflow-x: hidden;
+  aspect-ratio: 1.5;
 }
 .hero {
   width: 100%;
@@ -108,5 +106,6 @@ canvas {
   position: sticky;
   top: 0;
   width: 100%;
+  aspect-ratio: 1.5;
 }
 </style>

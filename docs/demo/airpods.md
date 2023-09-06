@@ -76,8 +76,16 @@ preloadImages();
 
 ```vue
 <template>
-  <div class="hero-wrap" ref="scrollview">
-    <div class="hero"><canvas id="hero-lightpass" /></div>
+  <div>
+    <p>对比静态图</p>
+    <img
+      src="https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0001.jpg"
+      alt=""
+    />
+    <p>滚动一下下面airpods</p>
+    <div class="hero-wrap" ref="scrollview">
+      <div class="hero"><canvas id="hero-lightpass" /></div>
+    </div>
   </div>
 </template>
 <script>
@@ -103,13 +111,10 @@ export default {
   },
   methods: {
     initCanvas() {
-      const width = this.$refs.scrollview.offsetWidth;
       const canvas = document.getElementById("hero-lightpass");
-      canvas.style.height = width * 0.66 + "px";
       const context = canvas.getContext("2d");
       this.canvas = canvas;
       this.context = context;
-      this.$refs.scrollview.style.height = width * 0.66 + "px";
     },
     currentFrame(index) {
       // 1 '1' '0001'
@@ -167,8 +172,8 @@ export default {
 .hero-wrap {
   width: 100%;
   /* background: #000; */
-  border: 1px solid;
   overflow-x: hidden;
+  aspect-ratio: 1.5;
 }
 .hero {
   width: 100%;
@@ -178,6 +183,7 @@ canvas {
   position: sticky;
   top: 0;
   width: 100%;
+  aspect-ratio: 1.5;
 }
 </style>
 ```
