@@ -17,6 +17,7 @@ export default defineUserConfig({
     title: "soupJian私房菜",
     description: "读万卷书 | 赚万贯财 | 行万里路",
     bundler: viteBundler(),
+    dest: "./dist",
     head: [
         ["link", { rel: "icon", href: "/favicon.ico" }],
         ["link", { rel: "stylesheet", href: "/css/valine.css" }],
