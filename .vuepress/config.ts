@@ -29,7 +29,7 @@ export default defineUserConfig({
         logo: "/img/logo.png",
         navbar: [
             { text: "Category", link: "/categories/js/1.html", icon: "reco-category" },
-            { text: "Tag", link: "/categories/js/1.html", icon: "reco-tag" },
+            { text: "Tag", link: "/tags/suanfa/1.html", icon: "reco-tag" },
             { text: "Timeline", link: "/timeline.html", icon: "reco-date" },
             {
                 text: "Contact",
