@@ -28,8 +28,9 @@ export default defineUserConfig({
     theme: recoTheme({
         logo: "/img/logo.png",
         navbar: [
-            { text: "首页", link: "/", icon: "reco-home" },
-            { text: "时间线", link: "/timeline.html", icon: "reco-date" },
+            { text: "Category", link: "/categories/js/1.html", icon: "reco-category" },
+            { text: "Tag", link: "/categories/js/1.html", icon: "reco-tag" },
+            { text: "Timeline", link: "/timeline.html", icon: "reco-date" },
             {
                 text: "Contact",
                 icon: "reco-message",
