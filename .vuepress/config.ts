@@ -22,6 +22,7 @@ export default defineUserConfig({
         ["link", { rel: "icon", href: "/favicon.ico" }],
         ["link", { rel: "stylesheet", href: "/css/valine.css" }],
         ["link", { rel: "stylesheet", href: "/css/reset.css" }],
+        ["script", { src: "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" }],
         ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }],
     ],
     // bundler: webpackBundler(),

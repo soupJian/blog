@@ -7,6 +7,10 @@ categories:
 
 ## TS 介绍
 
+:::tip
+[TS 进阶用法](/blogs/ts/upgrade.html)
+:::
+
 ### TS 介绍
 
 `TS` 为 JS 添加了类型支持
