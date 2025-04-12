@@ -2,9 +2,7 @@
 title: typescript 基础
 date: 2023-08-07 09:00:00
 categories:
-  - ts
-tags:
-  - ts
+    - ts
 ---
 
 ## TS 介绍
@@ -17,18 +15,18 @@ tags:
 
 静态类型和动态类型的区别：
 
-- 静态类型：编译期做类型检查
-- 动态类型：执行期做类型检查
+-   静态类型：编译期做类型检查
+-   动态类型：执行期做类型检查
 
 `TS`文件都会最终编译为 `JS` 执行，同时去除掉类型代码
 
 ### TS 优势
 
-- TS 可以提前到在编写代码的同时就发现代码中的错误。
-- 更好的代码提示，类型识别
-- 代码可维护性强，重构和拓展比较容易
-- TS 适合中大型项目交互协作。
-- 前端必备
+-   TS 可以提前到在编写代码的同时就发现代码中的错误。
+-   更好的代码提示，类型识别
+-   代码可维护性强，重构和拓展比较容易
+-   TS 适合中大型项目交互协作。
+-   前端必备
 
 ## TS 安装与使用
 
@@ -44,11 +42,11 @@ tsc hello.ts
 
 ### 类型概述
 
-- JS 已有类型
-  - 原始类型：`number`,`string`,`boolean`,`null`,`undefined`,`symbol`
-  - 对象类型：`object`(数组，对象，函数，正则，日期，Map,Set 等)
-- TS 新增类型字段
-  - 联合类型，类型别名（自定义类型），接口(interface)，元组(tuple)，类型(type)，枚举(enum)，void，any，unknow,
+-   JS 已有类型
+    -   原始类型：`number`,`string`,`boolean`,`null`,`undefined`,`symbol`
+    -   对象类型：`object`(数组，对象，函数，正则，日期，Map,Set 等)
+-   TS 新增类型字段
+    -   联合类型，类型别名（自定义类型），接口(interface)，元组(tuple)，类型(type)，枚举(enum)，void，any，unknow,
 
 ### 原始类型
 
@@ -94,12 +92,12 @@ let arr1: CustomerArray = [1, 2, 3, "4"];
 ```ts
 // 直接声明函数
 function add_1(num1: number, num2: number): number {
-  return num1 + num2;
+    return num1 + num2;
 }
 
 // 函数表达式
 const add_2 = (num1: number, num2: number): number => {
-  return num1 + num2;
+    return num1 + num2;
 };
 ```
 
@@ -109,7 +107,7 @@ const add_2 = (num1: number, num2: number): number => {
 type Add_function = (num1: number, num2: number) => number;
 
 let add_3: Add_function = (num1, num2) => {
-  return num1 + num2;
+    return num1 + num2;
 };
 
 add_3(1, 2);
@@ -121,7 +119,7 @@ add_3(1, 2);
 
 ```ts
 const log_name = (name: string): void => {
-  console.log(name);
+    console.log(name);
 };
 ```
 
@@ -131,11 +129,11 @@ const log_name = (name: string): void => {
 
 ```ts
 const log_userinfo = (name: string, age?: number): string => {
-  if (age) {
-    return `姓名:${name},年龄: ${age}`;
-  } else {
-    return `姓名:${name}`;
-  }
+    if (age) {
+        return `姓名:${name},年龄: ${age}`;
+    } else {
+        return `姓名:${name}`;
+    }
 };
 log_userinfo("soupjian");
 log_userinfo("soupjian", 24);
@@ -155,83 +153,83 @@ exprot default Hello: React.FC<propsType>(props:Props)=>{
 
 ### type 和 interface 的区别
 
-- `interface` 可以重复声名，`type` 定义后不可重复声明
+-   `interface` 可以重复声名，`type` 定义后不可重复声明
 
-  ```ts
-  interface Person {
-    name: string;
-  }
-  interface Person {
-    age: number;
-  }
-  // 会自动进行整合
-  const student: Person = {
-    name: "soupjian",
-    age: 24,
-  };
-  ```
+    ```ts
+    interface Person {
+        name: string;
+    }
+    interface Person {
+        age: number;
+    }
+    // 会自动进行整合
+    const student: Person = {
+        name: "soupjian",
+        age: 24,
+    };
+    ```
 
-- `interface` 可以继承 `extends`,`type` 不可以
-  ```ts
-  interface Person {
-    name: string;
-    age: number;
-  }
-  interface Student extends Person {
-    class: string;
-  }
-  const student: Student = {
-    name: "soupjian",
-    age: 24,
-    class: "五年级",
-  };
-  ```
+-   `interface` 可以继承 `extends`,`type` 不可以
+    ```ts
+    interface Person {
+        name: string;
+        age: number;
+    }
+    interface Student extends Person {
+        class: string;
+    }
+    const student: Student = {
+        name: "soupjian",
+        age: 24,
+        class: "五年级",
+    };
+    ```
 
-* type 可以定义非对象类型，interface 只能定义对象类型
-  - 基本类型 `type StringType: string`
-  - 联合类型 `type paramsType: string|number`
-  * 元组类型 `type arrType: [string,number,string]`
+*   type 可以定义非对象类型，interface 只能定义对象类型
+    -   基本类型 `type StringType: string`
+    -   联合类型 `type paramsType: string|number`
+    *   元组类型 `type arrType: [string,number,string]`
 
 ## 断言
 
-- “尖括号”
+-   “尖括号”
 
 ```ts
 let someValue: any = "hello";
 let strLength: number = (<string>someValue).length;
 ```
 
-- "as"
+-   "as"
 
 ```ts
 let someValue: any = "hello";
 let strLength: number = (someValue as string).length;
 ```
 
-- 断言为特定类型
+-   断言为特定类型
 
 ```ts
 interface Cat {
-  name: string;
-  meow: () => void;
+    name: string;
+    meow: () => void;
 }
 
 interface Dog {
-  name: string;
-  bark: () => void;
+    name: string;
+    bark: () => void;
 }
 
 function handlePet(pet: Cat | Dog) {
-  switch (pet.name) {
-    case "Fluffy":
-      (pet as Cat).meow(); // 在这里我们断言 pet 为 Cat 类型
-      break;
-    case "Buddy":
-      (pet as Dog).bark(); // 在这里我们断言 pet 为 Dog 类型
-      break;
-    default:
-      break;
-  }
+    switch (pet.name) {
+        case "Fluffy":
+            (pet as Cat).meow(); // 在这里我们断言 pet 为 Cat 类型
+            break;
+        case "Buddy":
+            (pet as Dog).bark(); // 在这里我们断言 pet 为 Dog 类型
+            break;
+        default:
+            break;
+    }
 }
 ```
 
@@ -239,19 +237,19 @@ function handlePet(pet: Cat | Dog) {
 
 ```ts
 enum Color {
-  Red,
-  Green,
-  Blue,
+    Red,
+    Green,
+    Blue,
 }
 
 let myColor: Color = Color.Green;
 console.log(myColor); // 输出: 1，因为枚举默认从 0 开始编号
 
 enum Direction {
-  Up = "UP",
-  Down = "DOWN",
-  Left = "LEFT",
-  Right = "RIGHT",
+    Up = "UP",
+    Down = "DOWN",
+    Left = "LEFT",
+    Right = "RIGHT",
 }
 
 let myDirection: Direction = Direction.Right;
@@ -310,8 +308,8 @@ let numType: typeof numValue; // 类型为 number
 let strType: typeof strValue; // 类型为 string
 
 type Person = {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 };
 
 let person: Person = { name: "Alice", age: 30 };
@@ -322,15 +320,15 @@ type PersonType = typeof person; // 类型为 Person
 
 ```ts
 type Person = {
-  name: string;
-  age: number;
-  email: string;
+    name: string;
+    age: number;
+    email: string;
 };
 
 type PersonKeys = keyof Person; // 类型为 "name" | "age" | "email"
 
 function getProperty<T, K extends keyof T>(obj: T, key: K) {
-  return obj[key];
+    return obj[key];
 }
 
 const person: Person = { name: "Alice", age: 30, email: "alice@example.com" };
@@ -344,15 +342,15 @@ const email = getProperty(person, "email"); // 类型为 string
 
 ```ts
 interface Shape {
-  calculateArea(): number;
+    calculateArea(): number;
 }
 
 class Circle implements Shape {
-  constructor(private radius: number) {}
+    constructor(private radius: number) {}
 
-  calculateArea() {
-    return Math.PI * this.radius ** 2;
-  }
+    calculateArea() {
+        return Math.PI * this.radius ** 2;
+    }
 }
 
 const myCircle = new Circle(5);
@@ -366,9 +364,9 @@ console.log(myCircle.calculateArea()); // 输出: 78.53981633974483
 ```ts
 // math.ts
 export namespace MathUtils {
-  export function add(x: number, y: number): number {
-    return x + y;
-  }
+    export function add(x: number, y: number): number {
+        return x + y;
+    }
 }
 
 // app.ts
@@ -380,27 +378,27 @@ console.log(sum); // 输出: 30
 
 ### declare
 
-- 声明全局变量或函数：
+-   声明全局变量或函数：
 
 ```ts
 declare var myGlobalVariable: number;
 declare function myGlobalFunction(): void;
 ```
 
-- 声明外部模块：
+-   声明外部模块：
 
 ```ts
 declare module "my-module" {
-  export function myFunction(): void;
-  export const myValue: number;
+    export function myFunction(): void;
+    export const myValue: number;
 }
 ```
 
-- 声明类库中的全局变量和函数
+-   声明类库中的全局变量和函数
 
 ```ts
 declare namespace MyLibrary {
-  function myFunction(): void;
-  const myValue: number;
+    function myFunction(): void;
+    const myValue: number;
 }
 ```

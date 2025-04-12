@@ -2,22 +2,23 @@
 title: vuex在ts中使用
 date: 2022-04-11
 categories:
-  - npm
+    - vue
 ---
 
 :::tip
-  vuex在ts中其实不是特别友好的，推荐 [pinia]('./pinia.md')
+vuex 在 ts 中其实不是特别友好的，推荐 [pinia]('./pinia.md')
 :::
 
-## 创建入口store
+## 创建入口 store
 
 > store
-> >  modules 仓库模块化
-> > >user.ts  user仓库
+>
+> > modules 仓库模块化
 > >
-> > index.ts  仓库入口\
-> > type.ts   存储store interface类型
-
+> > > user.ts user 仓库
+> >
+> > index.ts 仓库入口\
+> > type.ts 存储 store interface 类型
 
 ### index.ts
 
@@ -56,47 +57,46 @@ export default store;
 ```
 
 ### user.ts
+
 ```ts
-import {userStateType,userType} from '../type'
-const state:userStateType = {
-  user: null,
+import { userStateType, userType } from "../type";
+const state: userStateType = {
+    user: null,
 };
 const mutations = {
-  setUser(state:userStateType,user: userType){
-    state.user = user
-  }
+    setUser(state: userStateType, user: userType) {
+        state.user = user;
+    },
 };
-const actions = {
-};
+const actions = {};
 export default {
-  namespaced: true,
-  state,
-  actions,
-  mutations
+    namespaced: true,
+    state,
+    actions,
+    mutations,
 };
-
 ```
 
 ### type.ts
 
 ```ts
 // 定义根节点 store
-export interface rootStore{
-  theme: string,
-  userStore: userStateType
+export interface rootStore {
+    theme: string;
+    userStore: userStateType;
 }
 // 全局的store
-export interface storeStateType{
-  theme: string,
+export interface storeStateType {
+    theme: string;
 }
 // user模块的类型
-export interface userStateType{
-  user: userType | null,
+export interface userStateType {
+    user: userType | null;
 }
-export interface userType{
-  name: string,
-  age: number,
-  imgList: string[]
+export interface userType {
+    name: string;
+    age: number;
+    imgList: string[];
 }
 ```
 

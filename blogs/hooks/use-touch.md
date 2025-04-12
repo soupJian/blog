@@ -5,7 +5,7 @@ categories:
     - hooks
 ---
 
-```javascript
+```js
 import { useEffect } from "react";
 export const useTouch = (swipeRef, callbackTouchX) => {
     let startX = 0;
@@ -55,7 +55,7 @@ export const useTouch = (swipeRef, callbackTouchX) => {
 
 ## 使用
 
-```javascript
+```js
 const swipeRef = useRef(null);
 const callbackTouchX = (x) => {
     console.log(x);

@@ -2,29 +2,31 @@
 title: 上传文件的大小和格式校验
 date: 2021-12-24
 categories:
- - js
+    - js
 tags:
- - utils
+    - utils
 ---
 
->根据input的change事件,可以得到上传到文件
+> 根据 input 的 change 事件,可以得到上传到文件
 
 ```html
 <input type="file" onChange="upload();" id="upload" />
 ```
 
 ## 获取上传的文件大小
-```javascript
-function upload(){
-    var size = event.target.files[0].size / 1024 / 1024
-    if(size > 10){
-        alert(上传的文件大于10M,请重新选择上传)
+
+```js
+function upload() {
+    var size = event.target.files[0].size / 1024 / 1024;
+    if (size > 10) {
+        alert(上传的文件大于10M, 请重新选择上传);
     }
 }
 ```
+
 ## 获取上传的文件格式
 
-```javascript
+```js
 function upload(){
     // 两种方式获取文件名 第一种获取文件全路径,第二种获取文件名
     // const url = document.getElementById("upload").value
@@ -40,4 +42,5 @@ function upload(){
     }
 }
 ```
+
 <Valine/>

@@ -7,7 +7,7 @@ categories:
 
 ## 封装
 
-```javascript
+```js
 const useScript = (url, position, id) => {
     if (!position) return;
 

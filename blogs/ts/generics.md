@@ -2,9 +2,7 @@
 title: typescript 泛型
 date: 2023-08-07 14:00:00
 categories:
-  - ts
-tags:
-  - ts
+    - ts
 ---
 
 :::tip
@@ -14,11 +12,11 @@ tags:
 
 ## 常用的泛型变量
 
-- T（Type） ：代表类型，定义泛型时通常作为第一个类型变量名称
-- K（Key）：表示对象中的键类型
-- U：表示对象中的键类型
-- V（Value）：表示对象中的值类型
-- E（Element）：表示元素或者节点类型
+-   T（Type） ：代表类型，定义泛型时通常作为第一个类型变量名称
+-   K（Key）：表示对象中的键类型
+-   U：表示对象中的键类型
+-   V（Value）：表示对象中的值类型
+-   E（Element）：表示元素或者节点类型
 
 ## 最简单的泛型
 
@@ -54,11 +52,11 @@ const b: Foo<string> = false;
 ```ts
 type key = "react" | "next";
 type MapType = {
-  [k in key]: string;
+    [k in key]: string;
 };
 const versions: MapType = {
-  react: "18.2",
-  next: "13.4",
+    react: "18.2",
+    next: "13.4",
 };
 ```
 
@@ -66,7 +64,7 @@ const versions: MapType = {
 
 ```ts
 function identity<T = number>(arg: T): T {
-  return arg;
+    return arg;
 }
 
 const numValue = identity(42); // number
@@ -77,7 +75,7 @@ const strValue = identity("hello"); //  string
 
 ```ts
 function merge<T, U>(obj1: T, obj2: U): T & U {
-  return { ...obj1, ...obj2 };
+    return { ...obj1, ...obj2 };
 }
 
 const merged = merge({ name: "Alice" }, { age: 30 });
@@ -90,7 +88,7 @@ const merged = merge({ name: "Alice" }, { age: 30 });
 
 ```ts
 function userInfo<T>(name: T): T {
-  return name;
+    return name;
 }
 userInfo("soupjian");
 ```
@@ -99,7 +97,7 @@ userInfo("soupjian");
 
 ```ts
 interface Container<T> {
-  value: T;
+    value: T;
 }
 const numContainer: Container<number> = { value: 42 };
 const strContainer: Container<string> = { value: "hello" };
@@ -109,15 +107,15 @@ const strContainer: Container<string> = { value: "hello" };
 
 ```ts
 class Box<T> {
-  value: T;
+    value: T;
 
-  constructor(value: T) {
-    this.value = value;
-  }
+    constructor(value: T) {
+        this.value = value;
+    }
 
-  getValue(): T {
-    return this.value;
-  }
+    getValue(): T {
+        return this.value;
+    }
 }
 
 const numBox = new Box<number>(42);
@@ -131,7 +129,7 @@ console.log(strBox.getValue()); // hello
 
 ```ts
 function identity<T extends number | string>(arg: T): T {
-  return arg;
+    return arg;
 }
 
 const numValue = identity(42); //  number
@@ -140,30 +138,30 @@ const strValue = identity("hello"); //  string
 
 ```ts
 class Animal {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
+    name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
 }
 
 class Dog extends Animal {
-  bark() {
-    console.log("Woof!");
-  }
+    bark() {
+        console.log("Woof!");
+    }
 }
 
 class Cat extends Animal {
-  meow() {
-    console.log("Meow!");
-  }
+    meow() {
+        console.log("Meow!");
+    }
 }
 
 function makeSound<T extends Animal>(animal: T): void {
-  if (animal instanceof Dog) {
-    animal.bark();
-  } else if (animal instanceof Cat) {
-    animal.meow();
-  }
+    if (animal instanceof Dog) {
+        animal.bark();
+    } else if (animal instanceof Cat) {
+        animal.meow();
+    }
 }
 
 const dog = new Dog("Buddy");

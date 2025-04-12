@@ -2,9 +2,7 @@
 title: typescript 进阶用法
 date: 2023-08-08 13:00:00
 categories:
-  - ts
-tags:
-  - ts
+    - ts
 ---
 
 ## Partial
@@ -21,13 +19,13 @@ type Partial<T> = { [P in keyof T]?: T[P] };
 
 ```ts
 interface User {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 
 const zhangsan: User = {
-  name: "张三",
-  age: 24,
+    name: "张三",
+    age: 24,
 };
 
 const lisi: Partial<User> = {};
@@ -41,7 +39,7 @@ const lisi: Partial<User> = {};
 
 ```ts
 type Required<T> = {
-  [P in keyof T]-?: T[P];
+    [P in keyof T]-?: T[P];
 };
 ```
 
@@ -49,13 +47,13 @@ type Required<T> = {
 
 ```ts
 interface User {
-  name?: string;
-  age?: number;
+    name?: string;
+    age?: number;
 }
 
 const lisi: Required<User> = {
-  name: "张三",
-  age: 24,
+    name: "张三",
+    age: 24,
 };
 ```
 
@@ -67,7 +65,7 @@ const lisi: Required<User> = {
 
 ```ts
 type Readonly<T> = {
-  readonly [P in keyof T]: T[P];
+    readonly [P in keyof T]: T[P];
 };
 ```
 
@@ -75,20 +73,20 @@ type Readonly<T> = {
 
 ```ts
 interface User {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 
 const lisi: Readonly<User> = {
-  name: "张三",
-  age: 24,
+    name: "张三",
+    age: 24,
 };
 // lisi.name = "李四" // 这是错误的
 
 // 相当于 定义时候固定写死了
 interface User {
-  name: "张三";
-  age: 24;
+    name: "张三";
+    age: 24;
 }
 ```
 
@@ -100,7 +98,7 @@ interface User {
 
 ```ts
 type Pick<T, K extends keyof T> = {
-  [P in K]: T[P];
+    [P in K]: T[P];
 };
 ```
 
@@ -108,17 +106,17 @@ type Pick<T, K extends keyof T> = {
 
 ```ts
 interface Person {
-  name: string;
-  age: number;
-  email: string;
-  address: string;
+    name: string;
+    age: number;
+    email: string;
+    address: string;
 }
 
 type PersonBasicInfo = Pick<Person, "name" | "age">;
 
 const person: PersonBasicInfo = {
-  name: "Alice",
-  age: 30,
+    name: "Alice",
+    age: 30,
 };
 ```
 
@@ -136,17 +134,17 @@ type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
 
 ```ts
 interface Person {
-  name: string;
-  age: number;
-  email: string;
-  address: string;
+    name: string;
+    age: number;
+    email: string;
+    address: string;
 }
 
 type PersonWithoutEmail = Omit<Person, "email" | "address">;
 
 const person: PersonWithoutEmail = {
-  name: "Alice",
-  age: 30,
+    name: "Alice",
+    age: 30,
 };
 ```
 
@@ -158,7 +156,7 @@ const person: PersonWithoutEmail = {
 
 ```ts
 type Record<K extends keyof any, T> = {
-  [P in K]: T;
+    [P in K]: T;
 };
 ```
 
@@ -170,9 +168,9 @@ type Fruit = "apple" | "banana" | "orange";
 type Inventory = Record<Fruit, number>;
 
 const stock: Inventory = {
-  apple: 10,
-  banana: 15,
-  orange: 8,
+    apple: 10,
+    banana: 15,
+    orange: 8,
 };
 ```
 
@@ -249,11 +247,7 @@ const stringValue: DefinitelyString = "hello"; // 合法
 **源码**
 
 ```ts
-type Parameters<T extends (...args: any) => any> = T extends (
-  ...args: infer P
-) => any
-  ? P
-  : never;
+type Parameters<T extends (...args: any) => any> = T extends (...args: infer P) => any ? P : never;
 ```
 
 **例子**
@@ -275,15 +269,18 @@ const result = params[0] + params[1]; // 结果为 5
 **源码**
 
 ```ts
-type ConstructorParameters<T extends abstract new (...args: any) => any> =
-  T extends abstract new (...args: infer P) => any ? P : never;
+type ConstructorParameters<T extends abstract new (...args: any) => any> = T extends abstract new (
+    ...args: infer P
+) => any
+    ? P
+    : never;
 ```
 
 **例子**
 
 ```ts
 class Person {
-  constructor(public name: string, public age: number) {}
+    constructor(public name: string, public age: number) {}
 }
 
 type PersonConstructorParams = ConstructorParameters<typeof Person>;
@@ -301,18 +298,14 @@ console.log(person); // 输出: Person { name: 'Alice', age: 30 }
 **源码**
 
 ```ts
-type ReturnType<T extends (...args: any) => any> = T extends (
-  ...args: any
-) => infer R
-  ? R
-  : any;
+type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;
 ```
 
 **例子**
 
 ```ts
 function greet(name: string): string {
-  return `Hello, ${name}!`;
+    return `Hello, ${name}!`;
 }
 
 type GreetReturnType = ReturnType<typeof greet>;
@@ -327,15 +320,16 @@ const result: GreetReturnType = "soupjian";
 **源码**
 
 ```ts
-type InstanceType<T extends abstract new (...args: any) => any> =
-  T extends abstract new (...args: any) => infer R ? R : any;
+type InstanceType<T extends abstract new (...args: any) => any> = T extends abstract new (...args: any) => infer R
+    ? R
+    : any;
 ```
 
 **例子**
 
 ```ts
 class Person {
-  constructor(public name: string, public age: number) {}
+    constructor(public name: string, public age: number) {}
 }
 
 type PersonInstance = InstanceType<typeof Person>;
